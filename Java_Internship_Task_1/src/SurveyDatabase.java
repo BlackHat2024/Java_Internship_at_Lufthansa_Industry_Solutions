@@ -37,6 +37,21 @@ public class SurveyDatabase {
         }
 
         surveys.add(survey) ;
+        //Survey 3
+        questions =new ArrayList<>() ;
+        questions.add(new Question("w1")) ;
+        questions.add(new Question("w2")) ;
+        questions.add(new Question("w3")) ;
+        questions.add(new Question("w4")) ;
+        questions.add(new Question("w5")) ;
+
+        survey= new Survey(surveys.size()+1, "title3", "description3","topic3" ) ;
+
+        for(Question q : questions){
+            survey.addQuestion(q) ;
+        }
+
+        surveys.add(survey) ;
 
         for(Survey s : surveys){
             database.put(s.getId(), s) ;
