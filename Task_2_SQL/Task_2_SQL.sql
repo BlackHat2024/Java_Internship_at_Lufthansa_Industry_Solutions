@@ -7942,7 +7942,7 @@ select a ,b from nooforders where b = (select max(b) from nooforders);
 Select *  from NoOfOrders ;
 /*Query 2*/
 
-SELECT c.customerName,od.orderNumber ,od.productCode,od.quantityOrdered,od.priceEach,od.orderLineNumber FROM customers AS c  inner join orders as o inner join orderdetails as od on c.customerNumber=o.customerNumber and o.orderNumber=od.orderNumber and c.country="Germany" ;
+SELECT c.customerName,od.* FROM customers AS c  inner join orders as o inner join orderdetails as od on c.customerNumber=o.customerNumber and o.orderNumber=od.orderNumber and c.country="Germany" ;
 
 /*Query 3*/
 
